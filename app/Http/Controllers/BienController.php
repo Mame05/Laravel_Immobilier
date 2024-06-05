@@ -1,0 +1,12 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class BienController extends Controller
+{
+    public function index(){
+        return view('bien/index');
+    }
+}
