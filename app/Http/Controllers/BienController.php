@@ -14,15 +14,15 @@ class BienController extends Controller
     public function ListeBien(){
         $biens = Bien::all ();
           return view('bien/index', compact('biens'));
- 
- 
+
+
      }
 
     public function AjouterBien(){
         return view ('bien/ajouter');
 
      }
-   
+
         public function AjouterBienTraitement(Request $request){
         /*dd($request->all());*/
         $request->validate([
@@ -47,4 +47,5 @@ class BienController extends Controller
 
         return redirect('/bien')->with('status', "Le bien a bien été ajouté avec succés.");
     }
-}
+
+ }

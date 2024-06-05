@@ -1,0 +1,30 @@
+[1mdiff --git a/app/Http/Controllers/BienController.php b/app/Http/Controllers/BienController.php[m
+[1mindex 74974d6..035d5d8 100644[m
+[1m--- a/app/Http/Controllers/BienController.php[m
+[1m+++ b/app/Http/Controllers/BienController.php[m
+[36m@@ -14,15 +14,15 @@[m [mclass BienController extends Controller[m
+     public function ListeBien(){[m
+         $biens = Bien::all ();[m
+           return view('bien/index', compact('biens'));[m
+[31m- [m
+[31m- [m
+[32m+[m
+[32m+[m
+      }[m
+ [m
+     public function AjouterBien(){[m
+         return view ('bien/ajouter');[m
+ [m
+      }[m
+[31m-   [m
+[32m+[m
+         public function AjouterBienTraitement(Request $request){[m
+         /*dd($request->all());*/[m
+         $request->validate([[m
+[36m@@ -47,4 +47,5 @@[m [mpublic function AjouterBienTraitement(Request $request){[m
+ [m
+         return redirect('/bien')->with('status', "Le bien a bien été ajouté avec succés.");[m
+     }[m
+[31m-}[m
+[32m+[m
+[32m+[m[32m }[m
