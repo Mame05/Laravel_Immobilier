@@ -9,3 +9,12 @@ Route::get('/bien', [BienController::class, 'ListeBien']);
 
 Route::get('bien/ajouter', [BienController::class, 'AjouterBien']);
 Route::post('/ajouter/bien-traitement', [BienController::class, 'AjouterBienTraitement']);
+
+
+// route pour la modification de biens
+Route::post('/modifier/bien-traitement/', [BienController::class, 'ModifierBienTraitement']);
+Route::get('/modifier-bien/{id}', [BienController::class, 'ModifierBien']);
+
+
+//suppression
+Route::get('/supprimer-bien/{id}', [BienController::class, 'SupprimerBien']);
