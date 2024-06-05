@@ -22,7 +22,30 @@
                     <a href="/bien" class="btn btn-outline-success btn-sm">Revenir à la liste des biens</a>
                 </div>
                 <hr>
-               
+                <div class="d-flex card-body justify-content-between gap-3">
+                    <!-- -->
+                    <div>
+                    <br>
+                    <form action="/ajouter/commentaire-traitement" method="POST" class="form-group">
+                    @csrf
+                        <div class="form-group">
+                            <input type="hidden" name="bien_id" value="{{$bien->id}}">
+                            <label for="auteur">Présentez-vous!!!</label>
+                            <input type="text" class="form-control" id="auteur" name="auteur">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="contenu">Que dites-vous???</label>
+                            <textarea class="form-control" id="contenu" name="contenu"></textarea>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="d-flex justify-content-end">
+                            <button type="submit" class="btn btn-primary btn sm">Envoyer</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
        </div>
       </div>
