@@ -54,8 +54,8 @@
                     <div class="form-group">
                         <label for="statut">Est-il libre ou occupé? </label>
                         <select id="statut" name="statut" class="form-control" required>
-                            <option value="Occupé">Occupé</option>
-                            <option value="Libte">Libre</option>
+                            <option value="occupe">Occupé</option>
+                            <option value="libre">Libre</option>
                         </select>
                             
                     <div class="form-group">
