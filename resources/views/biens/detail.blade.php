@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CRUD D'ARTICLE</title>
+    <title>GESTION DE BIEN</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
@@ -23,7 +23,25 @@
                 </div>
                 <hr>
                 <div class="d-flex card-body justify-content-between gap-3">
-                    <!-- -->
+                    <div>
+                        <div class="row form-group">
+                        <h5 class="text-center">COMMENTAIRES</h5>
+                        <ol class="list-group list-group-numbered">
+                        @foreach($bien->commentaires as $commentaire)
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-1 me-auto card-title">
+                                <div class="fw-bold">{{ $commentaire->auteur }}</div>
+                                <p class="card-text">{{ $commentaire->contenu }}</p>
+                            </div> 
+                            <p class="d-inline-flex gap-3">  <!--C'est pour mettre des espacements entre les button-->
+                                <a href="/modifier-commentaire/{{ $commentaire->id }}"  class="btn btn-outline-primary btn-sm">Modifier</a>
+                                <a href="/supprimer-commentaire/{{ $commentaire->id }}"  class="btn btn-outline-danger btn-sm">Supprimer</a>
+                            </p>                     
+                            </li>
+                        @endforeach
+                        </ol>
+                    </div>
+                    </div>  
                     <div>
                     <br>
                     <form action="/ajouter/commentaire-traitement" method="POST" class="form-group">
@@ -38,6 +56,7 @@
                             <label for="contenu">Que dites-vous???</label>
                             <textarea class="form-control" id="contenu" name="contenu"></textarea>
                         </div>
+                        <br>
                         <br>
                         <br>
                         <div class="d-flex justify-content-end">

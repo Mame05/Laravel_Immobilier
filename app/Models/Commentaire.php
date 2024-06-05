@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Commentaire extends Model
 {
     use HasFactory;
+
+    public function article()
+    {
+        return $this->belongsTo(Bien::class);
+    }
 }
