@@ -84,5 +84,16 @@ public function ModifierBienTraitement(Request $request)
     return redirect('/bien')->with('status', "Le bien a bien été modifié avec succés.");
 }
 
+// suppression
+
+
+public function SupprimerBien($id)
+{
+    $bien = Bien::findOrFail($id);
+    // Delete the database record
+    $bien->delete();
+
+        return redirect('/bien')->with('status', "Le bien a bien été supprimé avec succés.");
+    }
 
  }

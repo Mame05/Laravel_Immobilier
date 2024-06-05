@@ -14,3 +14,7 @@ Route::post('/ajouter/bien-traitement', [BienController::class, 'AjouterBienTrai
 // route pour la modification de biens
 Route::post('/modifier/bien-traitement/', [BienController::class, 'ModifierBienTraitement']);
 Route::get('/modifier-bien/{id}', [BienController::class, 'ModifierBien']);
+
+
+//suppression
+Route::get('/supprimer-bien/{id}', [BienController::class, 'SupprimerBien']);
