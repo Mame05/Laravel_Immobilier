@@ -33,11 +33,6 @@
               <input type="text" class="form-control" id="nom" name="nom" value="{{ old('nom', $biens->nom) }}">
             </div>
 
-            {{-- <div class="form-group">
-                <label for="categorie">categorie</label>
-                <input type="text" class="form-control" id="categorie" name="categorie" value="{{old('categorie', $biens->categorie)}}">
-              </div> --}}
-
               <div class="form-group">
                 <label for="categorie">Catégorie</label>
                 <select id="categorie" name="categorie" class="form-control" required value="{{old('categorie', $biens->categorie)}}">
@@ -46,8 +41,6 @@
                     <option value="Luxe">Luxe</option>
                 </select>
             </div>
-
-
 
             <div class="form-group">
               <label for="image">Image illustrative </label>
