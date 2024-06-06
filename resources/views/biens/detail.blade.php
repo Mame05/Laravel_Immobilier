@@ -19,7 +19,10 @@
                     <p> <strong>Adresse :</strong> {{ $bien->adresse}} </p>
                     <p> <strong>Description :</strong> {{ $bien->description}} </p>
                     <p><strong> Date de l'ajout :</strong> {{$bien->date_ajout}}</p>
-                    <a href="/bien" class="btn btn-outline-success btn-sm">Revenir à la liste des biens</a>
+                    <p class="d-inline-flex gap-3"> 
+                        <a href="/biens" class="btn btn-outline-success btn-sm">Revenir à la liste des biens</a>
+                        <a href="/" class="btn btn-outline-success btn-sm">Retour a la page d'accueil</a>
+                    </p>
                 </div>
                 <hr>
                 <div class="d-flex card-body justify-content-between gap-3">

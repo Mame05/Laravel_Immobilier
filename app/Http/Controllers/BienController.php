@@ -8,13 +8,15 @@ use Illuminate\Support\Facades\DB;
 
 class BienController extends Controller
 {
-    /*public function index(){
-        return view('bien/index');
-    }*/
+    public function index(){
+        $biens = Bien::all ();
+          return view('biens/index', compact('biens'));
+
+    }
 
     public function ListeBien(){
         $biens = Bien::all ();
-          return view('biens/index', compact('biens'));
+          return view('biens/liste', compact('biens'));
 
 
      }
@@ -46,7 +48,7 @@ class BienController extends Controller
         $bien->date_ajout = $request->date_ajout;
         $bien->save();
 
-        return redirect('/bien')->with('status', "Le bien a bien été ajouté avec succés.");
+        return redirect('/biens')->with('status', "Le bien a bien été ajouté avec succés.");
     }
 
 
@@ -82,7 +84,7 @@ public function ModifierBienTraitement(Request $request)
     $bien->date_ajout = $request->date_ajout;
     $bien->update();
 
-    return redirect('/bien')->with('status', "Le bien a bien été modifié avec succés.");
+    return redirect('/biens')->with('status', "Le bien a bien été modifié avec succés.");
 }
 
 // suppression
@@ -94,7 +96,14 @@ public function SupprimerBien($id)
     // Delete the database record
     $bien->delete();
 
-        return redirect('/bien')->with('status', "Le bien a bien été supprimé avec succés.");
+        return redirect('/biens')->with('status', "Le bien a bien été supprimé avec succés.");
     }
+
+    public function DetailBien($id){
+        /*dd($request->all());*/
+        /*$bien = DB::table('biens')->where('id', $id)->get();*/
+        $bien = Bien::findOrFail($id);
+        return view('biens/detail', compact('bien'));
+    } 
 
  }

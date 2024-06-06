@@ -6,9 +6,9 @@ use App\Http\Controllers\CommentaireController;
 
 Route::get('/', [BienController::class,'index']);
 
-Route::get('/bien', [BienController::class, 'ListeBien']);
+Route::get('/biens', [BienController::class, 'ListeBien']);
 
-Route::get('bien/ajouter', [BienController::class, 'AjouterBien']);
+Route::get('/biens/ajouter', [BienController::class, 'AjouterBien']);
 Route::post('/ajouter/bien-traitement', [BienController::class, 'AjouterBienTraitement']);
 
 

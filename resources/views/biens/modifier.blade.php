@@ -92,7 +92,7 @@
 
             <br>
             <br>
-            <a href="/bien" class="btn btn-outline-primary btn-sm">Revenir à la liste des biens</a>
+            <a href="/biens" class="btn btn-outline-primary btn-sm">Revenir à la liste des biens</a>
 
             {{-- <a href="{{ route('biens-immobiliers.index') }}" class="btn btn-outline-primary btn-sm">Revenir à la liste des biens</a> --}}
           </form>
