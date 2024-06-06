@@ -33,11 +33,6 @@
               <input type="text" class="form-control" id="nom" name="nom" value="{{ old('nom', $biens->nom) }}">
             </div>
 
-            {{-- <div class="form-group">
-                <label for="categorie">categorie</label>
-                <input type="text" class="form-control" id="categorie" name="categorie" value="{{old('categorie', $biens->categorie)}}">
-              </div> --}}
-
               <div class="form-group">
                 <label for="categorie">Catégorie</label>
                 <select id="categorie" name="categorie" class="form-control" required value="{{old('categorie', $biens->categorie)}}">
@@ -46,8 +41,6 @@
                     <option value="Luxe">Luxe</option>
                 </select>
             </div>
-
-
 
             <div class="form-group">
               <label for="image">Image illustrative </label>
@@ -63,21 +56,9 @@
               <label for="adresse">Adresse</label>
               <input type="text" class="form-control" id="adresse" name="adresse" value="{{ old('adresse', $biens->adresse) }}">
             </div>
-
-            <label for="statut">Est-il occupé? </label>
-            <div>
-              <label>
-                <input type="checkbox" name="statut" value="1" {{ $biens->statut ? 'checked' : '' }}> Oui
-              </label>
-              <label>
-                <input type="checkbox" name="statut" value="0" {{ !$biens->statut ? 'checked' : '' }}> Non
-              </label>
-            </div>
-
-
             <div class="form-group">
                 <label for="statut">Est-il libre ou occupé? </label>
-                <select id="statut" name="statut" class="form-control" requiredvalue="" {{ $biens->statut ? 'checked' : '' }}>
+                <select id="statut" name="statut" class="form-control" required value="" {{ $biens->statut ? 'checked' : '' }}>
                     <option value="occupe">Occupé</option>
                     <option value="libre">Libre</option>
                 </select>

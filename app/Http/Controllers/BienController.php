@@ -8,15 +8,10 @@ use Illuminate\Support\Facades\DB;
 
 class BienController extends Controller
 {
-    /*public function index(){
-        return view('bien/index');
-    }*/
-
+   
     public function ListeBien(){
         $biens = Bien::all ();
           return view('biens/index', compact('biens'));
-
-
      }
 
     public function AjouterBien(){
@@ -49,17 +44,12 @@ class BienController extends Controller
         return redirect('/bien')->with('status', "Le bien a bien été ajouté avec succés.");
     }
 
-
-
-
 // modification Bien
 public function ModifierBien($id)
 {
     $biens = Bien::findOrFail($id);
     return view('biens/modifier', compact('biens'));
-
 }
-
 public function ModifierBienTraitement(Request $request)
 {
     $request->validate([
@@ -87,7 +77,6 @@ public function ModifierBienTraitement(Request $request)
 
 // suppression
 
-
 public function SupprimerBien($id)
 {
     $bien = Bien::findOrFail($id);
@@ -97,4 +86,12 @@ public function SupprimerBien($id)
         return redirect('/bien')->with('status', "Le bien a bien été supprimé avec succés.");
     }
 
+// gestion des details d'un bien
+public function DetailBien($id){
+
+// $bien = DB::table('/biens')->where('id', $id)->get();
+$bien = Bien::findorfail($id);
+return view('biens/detail', compact('bien'));
+
+}
  }
