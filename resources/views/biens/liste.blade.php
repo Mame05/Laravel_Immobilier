@@ -10,9 +10,16 @@
     <div class="container text-center">
         <div class="row">
             <div class="col s12">
-                <h1>LISTE DES BIENS</h1>
+              <h4>Salut {{auth()->user()->prenom}} {{auth()->user()->nom}}</h4>
+              <h4>Voici la liste de vos biens</h4>
                 <hr>
-                <a href="/biens/ajouter" class="btn btn-primary">Ajouter un bien</a>
+                <p class="d-inline-flex gap-3">
+                  <a href="/biens/ajouter" class="btn btn-primary">Ajouter un bien</a>
+                  <a href="#" onclick="document.getElementById('logout-form').submit()">
+                    <form action="{{route('logout')}}" action="post" id="logout-form">@csrf</form>
+                     Se deconnecter
+                  </a>
+                </p>
                 <hr>
                 @if (session('status'))
                 <div class="alert alert-success">
@@ -35,9 +42,9 @@
                         <p>
                             <div>
                                 @if($bien->statut=='libre')
-                                <span class="adge rounded-pill text-bg-warning">Libre</span>
+                                <span class="badge text-bg-success">Libre</span>
                                 @else
-                                <span class="adge rounded-pill text-bg-warning">Occupé</span>
+                                <span class="badge text-bg-danger">Occupé</span>
                                 @endif
                             </div>
                         </p>

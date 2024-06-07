@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Bien;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class BienController extends Controller
 {
     public function index(){
-        $biens = Bien::all ();
+        $biens = Bien::paginate(4);
           return view('biens/index', compact('biens'));
 
     }

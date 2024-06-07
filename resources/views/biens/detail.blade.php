@@ -20,7 +20,9 @@
                     <p> <strong>Description :</strong> {{ $bien->description}} </p>
                     <p><strong> Date de l'ajout :</strong> {{$bien->date_ajout}}</p>
                     <p class="d-inline-flex gap-3"> 
+                    @auth
                         <a href="/biens" class="btn btn-outline-success btn-sm">Revenir à la liste des biens</a>
+                    @endauth
                         <a href="/" class="btn btn-outline-success btn-sm">Retour a la page d'accueil</a>
                     </p>
                 </div>
