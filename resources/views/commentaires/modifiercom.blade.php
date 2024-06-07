@@ -26,7 +26,7 @@
                                                
                                                 <div class="form-group">
                                                     <label for="contenu">Que dites-vous???</label>
-                                                    <textarea class="form-control" id="contenu" name="contenu">"{{old('contenu', $commentaires->contenu)}}"</textarea>
+                                                    <textarea class="form-control" id="contenu" name="contenu">{{old('contenu', $commentaires->contenu)}}</textarea>
                                                 </div>
                                                 <br>
                                                
