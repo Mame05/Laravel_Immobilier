@@ -23,8 +23,10 @@ Route::get('/modifier-bien/{id}', [BienController::class, 'ModifierBien']);
 Route::get('/supprimer-bien/{id}', [BienController::class, 'SupprimerBien']);
 Route::get('/detail-bien/{id}', [BienController::class, 'DetailBien']);
 
-Route::post('/ajouter/commentaire-traitement', [CommentaireController::class, 'AjouterCommentaireTraitement']);
 
+// commentaires
+Route::post('/ajouter/commentaire-traitement', [CommentaireController::class, 'AjouterCommentaireTraitement']);
+//modifier commentair
    /*Connection*/
 Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::post('authentification-login', [AuthController::class, 'AuthentificationLogin'])->name('authentification-login');
