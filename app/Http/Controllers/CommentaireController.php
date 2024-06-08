@@ -44,7 +44,7 @@ class CommentaireController extends Controller
         $commentaire->auteur = $request->auteur;
         $commentaire->contenu = $request->contenu;
         $commentaire->update();
-        return view('biens/detail', compact('bien'));    
+        return view('biens/detail', compact('bien')); 
        }
 
        public function SupprimerCommentaire($id){

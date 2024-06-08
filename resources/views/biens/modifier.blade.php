@@ -32,12 +32,6 @@
               <label for="nom">Nom</label>
               <input type="text" class="form-control" id="nom" name="nom" value="{{ old('nom', $biens->nom) }}">
             </div>
-
-            {{-- <div class="form-group">
-                <label for="categorie">categorie</label>
-                <input type="text" class="form-control" id="categorie" name="categorie" value="{{old('categorie', $biens->categorie)}}">
-              </div> --}}
-
               <div class="form-group">
                 <label for="categorie">Catégorie</label>
                 <select id="categorie" name="categorie" class="form-control" required value="{{old('categorie', $biens->categorie)}}">
@@ -46,9 +40,6 @@
                     <option value="Luxe">Luxe</option>
                 </select>
             </div>
-
-
-
             <div class="form-group">
               <label for="image">Image illustrative </label>
               <input type="text" class="form-control" id="image" name="image"  value="{{ old('image', $biens->image) }}">
@@ -63,18 +54,6 @@
               <label for="adresse">Adresse</label>
               <input type="text" class="form-control" id="adresse" name="adresse" value="{{ old('adresse', $biens->adresse) }}">
             </div>
-
-            <label for="statut">Est-il occupé? </label>
-            <div>
-              <label>
-                <input type="checkbox" name="statut" value="1" {{ $biens->statut ? 'checked' : '' }}> Oui
-              </label>
-              <label>
-                <input type="checkbox" name="statut" value="0" {{ !$biens->statut ? 'checked' : '' }}> Non
-              </label>
-            </div>
-
-
             <div class="form-group">
                 <label for="statut">Est-il libre ou occupé? </label>
                 <select id="statut" name="statut" class="form-control" requiredvalue="" {{ $biens->statut ? 'checked' : '' }}>
@@ -92,11 +71,9 @@
 
             <br>
             <br>
-            <a href="/biens" class="btn btn-outline-primary btn-sm">Revenir à la liste des biens</a>
-
-            {{-- <a href="{{ route('biens-immobiliers.index') }}" class="btn btn-outline-primary btn-sm">Revenir à la liste des biens</a> --}}
+            <a href="/biens" class="btn btn-outline-primary btn-sm">Revenir au liste de vos biens</a>
           </form>
         </div>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3."></script>

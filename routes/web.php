@@ -21,6 +21,7 @@ Route::get('/modifier-bien/{id}', [BienController::class, 'ModifierBien']);
 
 //suppression
 Route::get('/supprimer-bien/{id}', [BienController::class, 'SupprimerBien']);
+// voir detail
 Route::get('/detail-bien/{id}', [BienController::class, 'DetailBien']);
 
 /*Ajout de commentaire*/
@@ -30,7 +31,7 @@ Route::post('/ajouter/commentaire-traitement', [CommentaireController::class, 'A
 Route::get('/modifier-commentaire/{id}', [CommentaireController::class, 'ModifierCommentaire']);
 Route::post('/modifier/commentaire-traitement', [CommentaireController::class, 'ModifierCommentaireTraitement']);
 
-/*supprimer commentaire*/
+/*supprimer commentaire  */
 
 Route::get('/supprimer-commentaire/{id}', [CommentaireController::class, 'SupprimerCommentaire']);
 
